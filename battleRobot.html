@@ -1,31 +1,18 @@
 <html>
     <head>
-        <!--se coloca meta sharset para que html acepte idioma español-->
         <meta charset = "utf-8" />
-        <title>Battle Robot</title>
-        <!--colocamos la direccion de nuestro archivo ".js"-->
-        <link rel="stylesheet" href="./styles.css">
+        <title>Battle Robot</title>       
+        <link rel="stylesheet" href="./css/styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body class="r">
-        <!--creamos seccion de crear mascotas-->
         <section id = "seleccionar-mascota">
             <h1 class="titulo">Battle Robot</h1>
 
             <h2 class="subtitulo">Choose your robot</h2>
                 
-            <!--label ayuda a que podamos dar un indicador al user de lo que selecciona -->
-            <!--el label casi siempre ira acopañada del "input"-->
-            <!--agregamos <input type radio/> para agregarlo puntos de seleccion-->
-            <!--se agreg name para dar un identificador a c/u y no se seleccionen todos-->
-            <!--asignamos id al input para identificar la radio en la mascota-->
-            <!--agregamos el atributo "for" ayuda a vincular un "label" con un "input"-->
-                
-            <!--div se utiliza para amarrar etiquetas y lo coloca dentro de una etiqueta-->
-            <div id="contenedorTarjetas" class="tarjetas">
-                                                 
-            </div>
-            <!--agregamos id a button para identificarlo en js-->
+            <div id="contenedorTarjetas" class="tarjetas"></div>
+
             <button class="boton-seleccionar" id="boton-mascota">Select</button>
          </section>
         
@@ -40,8 +27,6 @@
             </div>
          </section>
         
-         <!--creamos seleccion de ataque-->
-
         <section id = "seleccionar-ataque">
             <h1 class="titulo-pagina2">Battle Robot</h1>
             
@@ -70,10 +55,9 @@
                     <p id="vidas-enemigo">0</p>
                     <p id="mascota-enemigo"></p>
                     <div id="ataque-del-enemigo"></div>                    
-                </div>                
-            <!--agregamos la funcion "<span>" para poder cambiar el num vida atraves de js-->                                
+                </div>                                              
             </div> 
         </section>
-        <script src="./mokepon/js/mokepon.js"></script>
+        <script src="./js/mokepon.js"></script>
     </body>
 </html>
