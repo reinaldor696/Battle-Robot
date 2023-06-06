@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <!--se coloca meta sharset para que html acepte idioma español-->
+        <meta charset = "utf-8" />
+        <title>Battle Robot</title>
+        <!--colocamos la direccion de nuestro archivo ".js"-->
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body class="r">
+        <!--creamos seccion de crear mascotas-->
+        <section id = "seleccionar-mascota">
+            <h1 class="titulo">Battle Robot</h1>
+
+            <h2 class="subtitulo">Choose your robot</h2>
+                
+            <!--label ayuda a que podamos dar un indicador al user de lo que selecciona -->
+            <!--el label casi siempre ira acopañada del "input"-->
+            <!--agregamos <input type radio/> para agregarlo puntos de seleccion-->
+            <!--se agreg name para dar un identificador a c/u y no se seleccionen todos-->
+            <!--asignamos id al input para identificar la radio en la mascota-->
+            <!--agregamos el atributo "for" ayuda a vincular un "label" con un "input"-->
+                
+            <!--div se utiliza para amarrar etiquetas y lo coloca dentro de una etiqueta-->
+            <div id="contenedorTarjetas" class="tarjetas">
+                                                 
+            </div>
+            <!--agregamos id a button para identificarlo en js-->
+            <button class="boton-seleccionar" id="boton-mascota">Select</button>
+         </section>
+        
+         <section id="ver-mapa">
+            <h2 class="subtitulo">Tour the Map</h2>
+            <canvas id="mapa"></canvas>
+            <button onmouseup="detenerMoviento()" onmousedown="moverArriba()">Up</button>
+            <div>
+                <button onmouseup="detenerMoviento()" onmousedown="moverIzquierda()">Left</button>
+                <button onmouseup="detenerMoviento()" onmousedown="moverAbajo()">Down</button>
+                <button onmouseup="detenerMoviento()" onmousedown="moverDerecha()">Right</button>
+            </div>
+         </section>
+        
+         <!--creamos seleccion de ataque-->
+
+        <section id = "seleccionar-ataque">
+            <h1 class="titulo-pagina2">Battle Robot</h1>
+            
+            <h2 class="subtitulo">Choose your gun</h2>
+
+            <div id="contenedorAtaques" class="tarjetas-ataque">               
+                                      
+            </div>
+
+            <div id = "mensajes">
+                <p id="resultado">Fight!</p>
+
+                <section id = "reiniciar">
+                   <button id="boton-reiniciar">Reset</button>
+                </section>
+            </div>
+                
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador">0</p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataque-del-jugador"></div>                
+                </div>
+
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo">0</p>
+                    <p id="mascota-enemigo"></p>
+                    <div id="ataque-del-enemigo"></div>                    
+                </div>                
+            <!--agregamos la funcion "<span>" para poder cambiar el num vida atraves de js-->                                
+            </div> 
+        </section>
+        <script src="./mokepon/js/mokepon.js"></script>
+    </body>
+</html>

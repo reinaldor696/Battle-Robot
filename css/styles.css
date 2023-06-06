@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Orbitron&family=Poppins:wght@300&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.r {
+    background-image: url("./Neon\ City\ [2560x1600]_.png");
+     background-position: center;
+    background-size: cover;
+    width: auto;
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    color: white;
+    font-size: 80px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.titulo-pagina2 {
+    color: white;
+    font-size: 80px;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0px;
+}
+
+.subtitulo {
+    color: white;
+    font-size: 22px;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 2px;
+    background: hsl(0deg 0% 0% / 51%);
+}
+
+.tarjetas, .tarjetas-ataque {
+    display: flex;
+    gap: 30px;    
+}
+
+.tarjeta-de-mokepon {
+    width: 220px;
+    height: 260px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;  
+    flex-direction: column;
+}
+
+.tarjeta-de-mokepon p {
+    z-index: 1;
+    color: white;
+    font-size: 22px;
+    margin: 2px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.tarjeta-de-mokepon img{
+    width: 200px;
+    z-index: 1;
+}
+
+
+.tarjeta-de-mokepon::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+}
+  
+@keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+}
+  
+.tarjeta-de-mokepon::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    ;
+    inset: 5px;
+    border-radius: 15px;
+}  
+
+.boton-seleccionar {
+    border-radius: 10px;
+    background: hsl(0deg 0% 0% / 33%);
+    border: 3px solid white;
+    width: 200px;
+    height: 48;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+#seleccionar-ataque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ataque-fuego img {
+    width: 155px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ataque-agua img {
+    width: 155px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ataque-tierra img{
+    width: 155px;
+    display: flex;
+    flex-direction: column;
+}
+
+.boton-de-ataque {
+    background-color: #07182E;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: white;
+    border-color: transparent;
+    width: 150px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+}
+
+#mensajes {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 20px;
+    width: 260px;
+    padding: 20px;
+    background: hsl(0deg 0% 0% / 33%);
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#boton-reiniciar {
+    background: #07182E;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 4px;
+    width: 80px;
+    height: 25px;
+}
+
+.ataques {
+    font-family: 'Orbitron', sans-serif;
+    display: grid;
+    grid-template-columns: 130px 130px;
+    color: white;
+    background: hsl(0deg 0% 0% / 51%);
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+#vidas-jugador, #vidas-enemigo {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 0;
+    font-size: 32px;
+}
+
+.ataques-jugador, .ataques-enemigo {
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver-mapa button {    
+    border-radius: 10px;
+    background: hsl(0deg 0% 0% / 33%);
+    border: 3px solid white;
+    width: 80px;
+    height: 48;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 0;
+    font-size: 20px;
+    
+}
+
+@media (max-width: 392px) {
+    .tarjetas, .tarjetas-ataque {
+        flex-direction: column;
+    } 
+    input:checked + label {   
+        inset-inline: 2px;
+    }  
+}
+
+@media (max-width: 392px) {
+    #ver-mapa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {   
+    inset-block-start: 20px;
+}
