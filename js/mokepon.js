@@ -45,7 +45,7 @@ let vidasEnemigo = 3
 let lienzo = mapa.getContext("2d")
 let intervalo
 let mapaBackground = new Image()
-mapaBackground.src = "./Futuristic-Arena-Animated-Battlemap.jpg"
+mapaBackground.src = "./imagenes/Futuristic-Arena-Animated-Battlemap.jpg"
 let alturaQueBuscamos
 let anchoDelMapa = window.innerWidth - 20
 const anchoMaximoDelMapa = 650
@@ -57,11 +57,6 @@ alturaQueBuscamos = anchoDelMapa * 600 / 800
 
 mapa.width = anchoDelMapa
 mapa.height = alturaQueBuscamos
-
-
-//todas las "class" inician en mayuscula
-//"contructor" se utiliza para colocar las propiedades en el objeto
-//"this" hace referencia a esto mismo dentro de la misma clase 
 
 class BattleRobot {
     constructor(nombre, foto, vida, fotoMapa) {
@@ -78,7 +73,7 @@ class BattleRobot {
         this.velocidadX = 0
         this.velocidadY = 0 
     }
-
+    
     pintarRobots() {
     lienzo.drawImage(
         this.mapaFoto,
@@ -89,20 +84,17 @@ class BattleRobot {
     )}
 }
 
-//new hace referencia a un nuevo objeto que hace referencia a un nuevo objeto de la clase existente
-let SolarWeasel = new BattleRobot("Solar-Weasel", "./descarga-removebg-preview.png", 5, "./descarga-removebg-preview.png")
+let SolarWeasel = new BattleRobot("Solar-Weasel", "/Users/Romero/Documents/programacion/imagenes/solar-weasel-right.png", 5, "/Users/Romero/Documents/programacion/imagenes/solar-weasel-right.png")
 
-let DjinnSlayer = new BattleRobot("Djinn-Slayer", "./descarga__1_-removebg-preview.png", 5, "./descarga__1_-removebg-preview.png")
+let DjinnSlayer = new BattleRobot("Djinn-Slayer", "/Users/Romero/Documents/programacion/imagenes/djinn-Slayer-right.png", 5, "/Users/Romero/Documents/programacion/imagenes/djinn-Slayer-right.png")
 
-let JigsawOX = new BattleRobot("Jigsaw-OX", "./Twitter-removebg-preview.png", 5, "./Twitter-removebg-preview.png")
+let JigsawOX = new BattleRobot("Jigsaw-OX", "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-right.png", 5, "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-right.png")
 
-let SolarWeaselEnemigo = new BattleRobot("Solar-Weasel", "./descarga-removebg-preview-enemigo.png", 5, "./descarga-removebg-preview-enemigo.png")
+let SolarWeaselEnemigo = new BattleRobot("Solar-Weasel", "/Users/Romero/Documents/programacion/imagenes/solar-weasel-left.png", 5, "/Users/Romero/Documents/programacion/imagenes/solar-weasel-left.png")
 
-let DjinnSlayerEnemigo = new BattleRobot("Djinn-Slayer", "./descarga__1_-removebg-preview -enemigo.png", 5, "./descarga__1_-removebg-preview -enemigo.png")
+let DjinnSlayerEnemigo = new BattleRobot("Djinn-Slayer", "/Users/Romero/Documents/programacion/imagenes/djinn-Slayer-left.png", 5, "/Users/Romero/Documents/programacion/imagenes/djinn-Slayer-left.png")
 
-let JigsawOXEnemigo = new BattleRobot("Jigsaw-OX", "./Twitter-removebg-preview-enemigo.png", 5, "./Twitter-removebg-preview-enemigo.png")
-
-
+let JigsawOXEnemigo = new BattleRobot("Jigsaw-OX", "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-left.png", 5, "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-left.png")
 
 SolarWeasel.ataques.push(
     {nombre: "🔥", id: "boton-fuego"},
@@ -154,18 +146,10 @@ JigsawOXEnemigo.ataques.push(
 
 robots.push(SolarWeasel, DjinnSlayer, JigsawOX)
 
-//agregamos la funcion de iniciar juego
-//creamos una variable para boton dentro de la funcion
-//utilizamos"document" y ".get-element" para buscar el id del boton
-
 function iniciarJuego () {
 
     sectionSeleccionarAtaque.style.display = "none"
     sectionVerMapa.style.display = "none"
-
-    //"foreach" es la forma que se puede iterar por cuantos array existan
-    //por cada elemento que existe en el arreglo genera esa estructura de html e inyectala
-    //utilizamos "`" comilla invertida para identificar lo que se imprimira en el html
 
     robots.forEach((robots) => {
         opcionRobots = `
@@ -174,34 +158,24 @@ function iniciarJuego () {
             <p>${robots.nombre}</p>
             <img src=${robots.foto} alt=${robots.nombre}>
         </label>
-        `
-    //usamos la variable contenedor para identificar e imprimir el div de "seleccionarMascota"
-    //inyectamos la "opcionRobot" dentro de la estructura     
+        `     
     contenedorTarjetas.innerHTML += opcionRobots
 
     inputHipodoge = document.getElementById("Solar-Weasel")
     inputCapipepo = document.getElementById("Djinn-Slayer")
     inputRatigueya = document.getElementById("Jigsaw-OX")
-    
     })
 
     sectionReiniciar.style.display = "none"
 
-    //agregamos ".addeventlistener" para escuchar el evento de click
-    //no solo agregamos click sino la funcion a realizar
-
     botonMascota.addEventListener("click", seleccionarMascotaJugador)
-
-   
 
     botonJuego.addEventListener("click", reiniciarJuego)
 
     unirseAlJuego()
-
 }
 
 function unirseAlJuego() {
-    //fetch nos permite hacer llamadas a otros servicios por medio http
     fetch("http://localhost:8080/unirse")
         .then(function (res) {
             if (res.ok) {
@@ -214,18 +188,9 @@ function unirseAlJuego() {
         })
 }
 
-//agregamos seleccionar mascota
 function seleccionarMascotaJugador() {
     
     sectionSeleccionarMascota.style.display = "none"
-
-    
-    //utilizamos condicional "if" "else", creamos variable "inputHipodoge" 
-    //el input->"document.getElementById" y el get para ubicar "id=hipodoge"
-    // y mandamos a chequear con checked para saber si es valido
-    // si es valido se ejecuta el bloque
-    //si no continua con la siguiente funcion
-    //el "innerhtml" nos ayuda a dominar el dom en html y asignar dom a los "<span>"
 
     if (inputHipodoge.checked) {
         spanMascotaJugador.innerHTML = inputHipodoge.id
@@ -244,8 +209,7 @@ function seleccionarMascotaJugador() {
 
     extraerAtaques(robotsJugador)
     sectionVerMapa.style.display = "flex"
-    iniciarMapa()
-    
+    iniciarMapa()    
 } 
 
 function seleccionarRobot(robotsJugador){
@@ -264,10 +228,8 @@ function extraerAtaques(robotsJugador) {
     let ataques
     for (let i = 0; i < robots.length; i++) {
         if (robotsJugador === robots[i].nombre) {
-            ataques = robots[i].ataques
-            
-        }
-        
+            ataques = robots[i].ataques           
+        }       
     }
     mostrarAtaques(ataques)
 }
@@ -286,11 +248,7 @@ function mostrarAtaques(ataques) {
     botonFuego = document.getElementById("boton-fuego")
     botonAgua = document.getElementById("boton-agua")
     botonTierra = document.getElementById("boton-tierra")
-    //querySelectorAll es para seleccionar todos los elemento que tengan algo
-    //selecciona todos los elementos que compartan una clase
-    //no se utiliza el id porque el id no puede repetirse(es mala practica)
     botones = document.querySelectorAll(".BAtaques")
-
 }
 
 function secuenciaAtaque() {
@@ -314,18 +272,14 @@ function secuenciaAtaque() {
             }
             ataqueAleatorioEnemigo() 
         })
-    })    
-    
+    })        
 }
 
 function seleccionarMascotaEnemigo (enemigo){  
     spanMascotaEnemigo.innerHTML = enemigo.nombre
     ataquesRobotsEnemigo = enemigo.ataques
-    secuenciaAtaque()
-    
+    secuenciaAtaque()   
 }
-
-
 
 function ataqueAleatorioEnemigo() {
     console.log('Ataques enemigo', ataquesRobotsEnemigo);
@@ -380,9 +334,7 @@ function combate() {
             spanVidasEnemigo.innerHTML = victoriasEnemigo
         }
         
-    }
-    
-    
+    }   
     revisarVidas() 
 }
 
@@ -412,14 +364,11 @@ function crearMensajes(resultado) {
 function crearMensajesFinal(resultadoFinal) {
     
     sectionMensaje.innerHTML = resultadoFinal
-
-    //colocamos los botones disabled para que se desactiven al terminar la partida
-        
+       
     sectionReiniciar.style.display = "block" 
 }
 
 function reiniciarJuego(){
-//location.reload es una funcion que nos permite reiniciar la pagina html
     location.reload()
 }
 
@@ -430,7 +379,6 @@ function aleatorio(min, max) {
 function pintarCanvas() {
     robotsJugadorObjetos.x = robotsJugadorObjetos.x + robotsJugadorObjetos.velocidadX
     robotsJugadorObjetos.y = robotsJugadorObjetos.y + robotsJugadorObjetos.velocidadY
-    //la funcion clearrect() limpia el canva
     lienzo.clearRect(0, 0, mapa.width, mapa.height)
     lienzo.drawImage(
         mapaBackground,
@@ -489,13 +437,10 @@ function detenerMoviento() {
     robotsJugadorObjetos.velocidadY = 0
 }
 
-//cuando usamos eventlistener muchas veces regresa un evento
 function sePresionoUnaTecla(event) {
-    //switchcase es una manera de hacer varios condicionales if juntos
     switch (event.key) {
         case "ArrowUp":
             moverArriba()
-            //switch compara una a una las condiciones y break es para ejecutar la accion
             break
         case "ArrowDown":
             moverAbajo()
@@ -505,8 +450,7 @@ function sePresionoUnaTecla(event) {
             break
         case "ArrowRight":
             moverDerecha()
-            break 
-        //el default es por si no entra en los casos anteriores       
+            break        
         default:
             break
     }
@@ -516,14 +460,10 @@ function iniciarMapa() {
     
     robotsJugadorObjetos = obtenerObjetoRobot(robotsJugador)
 
-    //interval es la funcion que va llamando una funcion constantemente esperando un poco de tiempo
-    //ponemos 50 porque es el tiempo en milisegundos para ejecutar esa accion
     intervalo = setInterval(pintarCanvas, 50)
     
-    //el evento keydown se ejecuta cuando se presiona una tecla
     window.addEventListener("keydown", sePresionoUnaTecla)
     
-    //el evento keyup deja de funcionar cuando se suelta una tecla
     window.addEventListener("keyup", detenerMoviento)
 }
 
@@ -570,9 +510,5 @@ function revisarColision(enemigo) {
     sectionVerMapa.style.display = "none"
     seleccionarMascotaEnemigo(enemigo)
 }
-
-//llamamos a la funcion de "addevenlistener" para que pueda funcionar el boton
-//lo llamamos desde window para escuche cualquier evento que suceda en el navegador
-//no solo agregamos load sino la funcion a realizar
 
 window.addEventListener("load" , iniciarJuego)
