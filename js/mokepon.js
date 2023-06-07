@@ -84,17 +84,17 @@ class BattleRobot {
     )}
 }
 
-let SolarWeasel = new BattleRobot("Solar-Weasel", "./descarga-removebg-preview.png", 5, "./descarga-removebg-preview.png")
+let SolarWeasel = new BattleRobot("Solar-Weasel", "/Users/Romero/Documents/programacion/imagenes/solar-weasel-right.png", 5, "/Users/Romero/Documents/programacion/imagenes/solar-weasel-right.png")
 
-let DjinnSlayer = new BattleRobot("Djinn-Slayer", "./descarga__1_-removebg-preview.png", 5, "./descarga__1_-removebg-preview.png")
+let DjinnSlayer = new BattleRobot("Djinn-Slayer", "/Users/Romero/Documents/programacion/imagenes/djinn-Slayer-right.png", 5, "/Users/Romero/Documents/programacion/imagenes/djinn-Slayer-right.png")
 
-let JigsawOX = new BattleRobot("Jigsaw-OX", "./Twitter-removebg-preview.png", 5, "./Twitter-removebg-preview.png")
+let JigsawOX = new BattleRobot("Jigsaw-OX", "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-right.png", 5, "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-right.png")
 
-let SolarWeaselEnemigo = new BattleRobot("Solar-Weasel", "./descarga-removebg-preview-enemigo.png", 5, "./descarga-removebg-preview-enemigo.png")
+let SolarWeaselEnemigo = new BattleRobot("Solar-Weasel", "/Users/Romero/Documents/programacion/imagenes/solar-weasel-left.png", 5, "/Users/Romero/Documents/programacion/imagenes/solar-weasel-left.png")
 
-let DjinnSlayerEnemigo = new BattleRobot("Djinn-Slayer", "./descarga__1_-removebg-preview -enemigo.png", 5, "./descarga__1_-removebg-preview -enemigo.png")
+let DjinnSlayerEnemigo = new BattleRobot("Djinn-Slayer", "/Users/Romero/Documents/programacion/imagenes/djinn-Slayer-left.png", 5, "/Users/Romero/Documents/programacion/imagenes/djinn-Slayer-left.png")
 
-let JigsawOXEnemigo = new BattleRobot("Jigsaw-OX", "./Twitter-removebg-preview-enemigo.png", 5, "./Twitter-removebg-preview-enemigo.png")
+let JigsawOXEnemigo = new BattleRobot("Jigsaw-OX", "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-left.png", 5, "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-left.png")
 
 SolarWeasel.ataques.push(
     {nombre: "🔥", id: "boton-fuego"},
