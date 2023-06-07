@@ -96,9 +96,8 @@ let DjinnSlayerEnemigo = new BattleRobot("Djinn-Slayer", "/Users/Romero/Document
 
 let JigsawOXEnemigo = new BattleRobot("Jigsaw-OX", "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-left.png", 5, "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-left.png")
 
-
 SolarWeasel.ataques.push(
-    {nombre: "/Users/Romero/Documents/programacion/imagenes/judgment-of-shamash.png", id: "boton-fuego"},
+    {nombre: "🔥", id: "boton-fuego"},
     {nombre: "🔥", id: "boton-fuego"},
     {nombre: "🔥", id: "boton-fuego"},
     {nombre: "💧", id: "boton-agua"},
