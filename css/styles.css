@@ -4,8 +4,8 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.r {
-    background-image: url("./Neon\ City\ [2560x1600]_.png");
+.background {
+    background-image: url("/Users/Romero/Documents/programacion/imagenes/NeonCity.png");
      background-position: center;
     background-size: cover;
     width: auto;
