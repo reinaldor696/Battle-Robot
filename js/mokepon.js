@@ -73,7 +73,7 @@ class BattleRobot {
         this.velocidadX = 0
         this.velocidadY = 0 
     }
-
+    
     pintarRobots() {
     lienzo.drawImage(
         this.mapaFoto,
@@ -96,8 +96,9 @@ let DjinnSlayerEnemigo = new BattleRobot("Djinn-Slayer", "/Users/Romero/Document
 
 let JigsawOXEnemigo = new BattleRobot("Jigsaw-OX", "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-left.png", 5, "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-left.png")
 
+
 SolarWeasel.ataques.push(
-    {nombre: "🔥", id: "boton-fuego"},
+    {nombre: "/Users/Romero/Documents/programacion/imagenes/judgment-of-shamash.png", id: "boton-fuego"},
     {nombre: "🔥", id: "boton-fuego"},
     {nombre: "🔥", id: "boton-fuego"},
     {nombre: "💧", id: "boton-agua"},
