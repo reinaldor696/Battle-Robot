@@ -6,7 +6,7 @@ body {
 
 .background {
     background-image: url("/imagenes/NeonCity.png");
-     background-position: center;
+    background-position: center;
     background-size: cover;
     width: auto;
 }
