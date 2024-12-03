@@ -5,7 +5,7 @@ body {
 }
 
 .background {
-    background-image: url("/Users/Romero/Documents/programacion/imagenes/NeonCity.png");
+    background-image: url("/imagenes/NeonCity.png");
      background-position: center;
     background-size: cover;
     width: auto;
@@ -215,20 +215,32 @@ body {
     
 }
 
-@media (max-width: 392px) {
+@media (max-width: 480px) {
     .tarjetas, .tarjetas-ataque {
         flex-direction: column;
     } 
     input:checked + label {   
         inset-inline: 2px;
-    }  
+    } 
+
+    .tarjetas, .tarjetas-ataque {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
 }
 
-@media (max-width: 392px) {
+@media (max-width: 480px) {
     #ver-mapa {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    #mapa {
+        width: 78%;
+        height: auto;
     }
 }
 

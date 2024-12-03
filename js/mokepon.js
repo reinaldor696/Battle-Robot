@@ -84,17 +84,17 @@ class BattleRobot {
     )}
 }
 
-let SolarWeasel = new BattleRobot("Solar-Weasel", "/Users/Romero/Documents/programacion/imagenes/solar-weasel-right.png", 5, "/Users/Romero/Documents/programacion/imagenes/solar-weasel-right.png")
+let SolarWeasel = new BattleRobot("Solar-Weasel", "/imagenes/solar-weasel-right.png", 5, "/imagenes/solar-weasel-right.png")
 
-let DjinnSlayer = new BattleRobot("Djinn-Slayer", "/Users/Romero/Documents/programacion/imagenes/djinn-Slayer-right.png", 5, "/Users/Romero/Documents/programacion/imagenes/djinn-Slayer-right.png")
+let DjinnSlayer = new BattleRobot("Djinn-Slayer", "/imagenes/djinn-Slayer-right.png", 5, "/imagenes/djinn-Slayer-right.png")
 
-let JigsawOX = new BattleRobot("Jigsaw-OX", "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-right.png", 5, "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-right.png")
+let JigsawOX = new BattleRobot("Jigsaw-OX", "/imagenes/jigsaw-ox-right.png", 5, "/imagenes/jigsaw-ox-right.png")
 
-let SolarWeaselEnemigo = new BattleRobot("Solar-Weasel", "/Users/Romero/Documents/programacion/imagenes/solar-weasel-left.png", 5, "/Users/Romero/Documents/programacion/imagenes/solar-weasel-left.png")
+let SolarWeaselEnemigo = new BattleRobot("Solar-Weasel", "/imagenes/solar-weasel-left.png", 5, "/imagenes/solar-weasel-left.png")
 
-let DjinnSlayerEnemigo = new BattleRobot("Djinn-Slayer", "/Users/Romero/Documents/programacion/imagenes/djinn-Slayer-left.png", 5, "/Users/Romero/Documents/programacion/imagenes/djinn-Slayer-left.png")
+let DjinnSlayerEnemigo = new BattleRobot("Djinn-Slayer", "/imagenes/djinn-Slayer-left.png", 5, "/imagenes/djinn-Slayer-left.png")
 
-let JigsawOXEnemigo = new BattleRobot("Jigsaw-OX", "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-left.png", 5, "/Users/Romero/Documents/programacion/imagenes/jigsaw-ox-left.png")
+let JigsawOXEnemigo = new BattleRobot("Jigsaw-OX", "/imagenes/jigsaw-ox-left.png", 5, "/imagenes/jigsaw-ox-left.png")
 
 SolarWeasel.ataques.push(
     {nombre: "🔥", id: "boton-fuego"},
